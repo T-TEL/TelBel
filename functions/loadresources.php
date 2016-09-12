@@ -12,13 +12,14 @@ if(isset($_GET['db'])){
 							<td style='width: 30%;'>".$doc->title."</td>
 							<td>".$doc->description."</td>
 							<td>".$doc->author."</td>
-							<td>";
-		  if(isset($doc->views)){
-			  print($doc->views);
-		  }else{
-			  print('0');
-		  }
-		  echo "</td>";
+							";
+//echo "<td>"
+// if(isset($doc->views)){
+//			  print($doc->views);
+//		  }else{
+//			  print('0');
+//		  }
+//		  echo "</td>";
 		  if($doc->legacy->type=='mp3'){
 			   print("<td><a href='viewResource.php?database=ttel_resources&resid=".$doc->_id."' target='_blank' class='btn btn-lg btn-success glyphicon glyphicon-music'></a></td>");
 		   }
@@ -41,7 +42,6 @@ if(isset($_GET['lang'])){
 	//$language = $_GET['lang'];
 	//$level = $_GET['level'];
 	$language = "en";
-	$level = "P4";
 	global $couchUrl;
 	global $facilityId;
 	$resources = new couchClient($couchUrl, "resources");
@@ -54,12 +54,14 @@ if(isset($_GET['lang'])){
 							<td style='width: 30%;'>".$doc->title."</td>
 							<td>".$doc->description."</td>
 							<td>".$doc->author."</td>
-							<td>";
-							if(isset($doc->views)){
-								print($doc->views);
-							}else{
-								print('0');
-							}
+							";
+//echo "<td>"
+// if(isset($doc->views)){
+//			  print($doc->views);
+//		  }else{
+//			  print('0');
+//		  }
+//		  echo "</td>";
 							echo "</td>";
 							if($doc->legacy->type=='mp3'){
 								 print("<td><a href='viewResource.php?database=resources&resid=".$doc->_id."' target='_blank' class='btn btn-lg btn-success glyphicon glyphicon-music'></a></td>");

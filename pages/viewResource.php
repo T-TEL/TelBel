@@ -17,12 +17,16 @@ if(isset($_GET['resid']))
 			array_push($arrayFiles,$key);
 	}
 	//echo $arrayImage[0];
-	//
-	//echo $_SERVER['SERVER_NAME'];
-	$mystring = "http://".$_SERVER['SERVER_NAME'].":5984/".$_GET['database']."/".$_GET['resid']."/".urlencode($arrayFiles[0])."";
-	recordActionViewed($_GET['resid'],$_GET['database']);
-	die('<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$mystring.'">');
-			
+	if($ext = pathinfo(urlencode($arrayFiles[0]), PATHINFO_EXTENSION)=="mp4"){
+		   $mystring = "http://".$_SERVER['SERVER_NAME'].":5984/".$_GET['database']."/".$_GET['resid']."/".urlencode($arrayFiles[0])."";
+		   header("Location:player/index.php?url=".$mystring);
+			die();            
+	}else{
+			$mystring = "http://".$_SERVER['SERVER_NAME'].":5984/".$_GET['database']."/".$_GET['resid']."/".urlencode($arrayFiles[0])."";
+			die('<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$mystring.'">');
+	}
+        ///recordActionViewed($_GET['resid'],$_GET['database']);
+                        
 }
 ?>
 </head>

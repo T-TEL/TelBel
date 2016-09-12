@@ -89,10 +89,10 @@
   <div id="wrapper">
   
      <div class="container"  style="background-color:#FFF;">
-       <div class="row"  style="background-color:rgb(239, 62, 60);"><img src="../images/Ttel_banner.png" width="512" height="108" alt="T-Tel"></div>
+       <div class="row"  style="background-color:rgb(239, 62, 60);"><img src="../images/Ttel_banner.jpg" width="360" height="108" alt="T-Tel"></div>
                <div class="row">
                <div class="col-lg-12" style="margin-top:50px; margin-bottom:20px;">
-                <div class="col-sm-6"><h3><input type="checkbox" name="my-checkbox" id="my-checkbox" onChange="ttel_resources()" > Include OLE Ghana Resources </h3></div> 
+                <!--<div class="col-sm-6"><h3><input type="checkbox" name="my-checkbox" id="my-checkbox" onChange="ttel_resources()" > Include OLE Ghana Resources </h3></div> -->
                 <!--<div class="col-sm-6"><h3><input type="checkbox" name="my-checkbox2" checked> Include T-Tel Resources </h3></div>-->
                 
                 
@@ -160,8 +160,7 @@
                                   <tr>
                                     <th>Title</th>
                                     <th>Description</th>
-                                    <th>Auther</th>
-                                    <th>Views</th>
+                                    <th>Author</th>
                                     <th></th>
                                   </tr>
                                 </thead>
