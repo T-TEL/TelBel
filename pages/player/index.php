@@ -48,7 +48,7 @@ include "../../lib/couchDocument.php";
             <div class="span12">
                 <h2>&nbsp;</h2>
                     <div class="videoUiWrapper thumbnail">
-                        <video width="800" height="400"  id="masterplayer">
+                        <video width="800" height="400"  id="masterplayer" controls autoplay>
                            <!-- <source src="http://ia700305.us.archive.org/18/items/CopyingIsNotTheft/CINT_Nik_H264_720.ogv" type="video/ogg"> -->
                             <source src="<?php echo $mystring; ?>" type="video/mp4">
                             Your browser does not support the video tag. Download the video using the link below.
