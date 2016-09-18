@@ -1,3 +1,6 @@
+<?php
+include "../secure/talk2db.php";
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,13 +14,34 @@
     </head>
     <body>
         <div class="container">
+        <div class="row"><div class="span12"><h1>
+        <?php
+		
+		global $couchUrl;
+		global $facilityId;
+		$resources = new couchClient($couchUrl, "ttel_resources");
+		$doc = $resources->getDoc($_GET['resid']);
+		$docAttachment = $doc->_attachments;
+		$arrayFiles = array();
+		foreach($docAttachment as $key => $value){
+				array_push($arrayFiles,$key);
+		}
+		$mystring = "http://".$_SERVER['SERVER_NAME'].":5984/ttel_resources/".$_GET['resid']."/".urlencode($arrayFiles[0])."";
+	try{
+		print($doc->title);
+	}catch(Exception $err){
+		print($err);
+	}
+			
+        ?>
+        </h1></div></div>
           <div class="row">
             <div class="span12">
                 <h2>&nbsp;</h2>
                     <div class="videoUiWrapper thumbnail">
                         <video width="800" height="400"  id="masterplayer">
                            <!-- <source src="http://ia700305.us.archive.org/18/items/CopyingIsNotTheft/CINT_Nik_H264_720.ogv" type="video/ogg"> -->
-                            <source src="<?php echo $_GET['url']; ?>" type="video/mp4">
+                            <source src="<?php echo $mystring; ?>" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>

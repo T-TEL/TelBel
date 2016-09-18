@@ -23,8 +23,8 @@ if(isset($_GET['resid']))
 				die('<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$mystring.'">');
 			          
 			}else{
-				$mystring = "http://".$_SERVER['SERVER_NAME'].":5984/".$_GET['database']."/".$_GET['resid']."/".urlencode($arrayFiles[0])."";
-		   header("Location:player/index.php?url=".$mystring);
+				/////$mystring = "http://".$_SERVER['SERVER_NAME'].":5984/".$_GET['database']."/".$_GET['resid']."/".urlencode($arrayFiles[0])."";
+		   header("Location:player/index.php?resid=".$_GET['resid']);
 		   		die(); 
 			}
 	}else{
