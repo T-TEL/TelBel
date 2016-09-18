@@ -50,18 +50,24 @@ include "../../lib/couchDocument.php";
                     <div class="videoUiWrapper thumbnail">
                         <video width="800" height="400"  id="masterplayer">
                            <!-- <source src="http://ia700305.us.archive.org/18/items/CopyingIsNotTheft/CINT_Nik_H264_720.ogv" type="video/ogg"> -->
+<<<<<<< HEAD
                             <source src="<?php echo $mystring; ?>" type="video/mp4">
                             Your browser does not support the video tag.
+=======
+                            <source src="<?php echo $_GET['url']; ?>" type="video/mp4">
+                            Your browser does not support the video tag. Download the video using the link below.
+>>>>>>> 4ccec1e33ef9154ec7667191602b1522aa5130e5
                         </video>
                     </div>
                     <h2>&nbsp;</h2>
               </div>
           </div>
+        You can <a href="<?php echo $_GET['url']; ?>" download>download the video here</a>.
         </div>
         <script type="text/javascript" src="assets/js/jquery-1.8.1.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery.video-ui.js"></script>
         <script type="text/javascript" >
-            $('#masterplayer').videoUI();
+            // $('#masterplayer').videoUI();
         </script>
     </body>
 </html>
