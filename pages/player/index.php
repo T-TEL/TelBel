@@ -57,7 +57,7 @@ include "../../lib/couchDocument.php";
                     <h2>&nbsp;</h2>
               </div>
           </div>
-          You can <a href="<?php echo $_GET['url']; ?>" download>download the video here</a>.
+          You can <a href="<?php echo $mystring; ?>" download>download the video here</a>.
         </div>
         <script type="text/javascript" src="assets/js/jquery-1.8.1.min.js"></script>
         <script type="text/javascript" src="assets/js/jquery.video-ui.js"></script>
