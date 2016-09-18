@@ -31,10 +31,22 @@ function recordActionViewed($resourceID,$dbgroup){
 	$resources->storeDoc($doc);
 }
 
-////error_reporting(E_ERROR);
+error_reporting(E_ERROR);
 
+try{
 include "../lib/couch.php";
 include "../lib/couchClient.php";
 include "../lib/couchDocument.php";
+}catch(Exception $err){
+	
+}
+
+try{
+include "..././lib/couch.php";
+include "../../lib/couchClient.php";
+include "../../lib/couchDocument.php";
+}catch(Exception $err){
+	
+}
 
 ?>

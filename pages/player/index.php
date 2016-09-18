@@ -1,5 +1,14 @@
 <?php
-include "../secure/talk2db.php";
+try{
+global $couchUrl;
+$couchUrl = 'http://pi:raspberry@127.0.0.1:5984';
+include "../../lib/couch.php";
+include "../../lib/couchClient.php";
+include "../../lib/couchDocument.php";
+
+}catch(Exception $err){
+	
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +23,7 @@ include "../secure/talk2db.php";
     </head>
     <body>
         <div class="container">
-        <div class="row"><div class="span12"><h1>
+        <div class="row"><div class="span12"><h2>
         <?php
 		
 		global $couchUrl;
@@ -34,7 +43,7 @@ include "../secure/talk2db.php";
 	}
 			
         ?>
-        </h1></div></div>
+        </h2></div></div>
           <div class="row">
             <div class="span12">
                 <h2>&nbsp;</h2>
